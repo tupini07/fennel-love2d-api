@@ -20,8 +20,8 @@ jobs:
     - name: Install dependencies
       shell: bash
       run: |
-        apt update
-        apt instal luarocks -yq
+        sudo apt update
+        sudo apt instal luarocks -yq
         luarocks install fennel
         fennel --version
       
