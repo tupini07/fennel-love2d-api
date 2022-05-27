@@ -16,12 +16,20 @@ jobs:
     
     - name: Checkout submodules
       uses: snickerbockers/submodules-init@v4
-      
+ 
+    - name: Install Lua/LuaJIT
+      uses: leafo/gh-actions-lua@v9.1.0
+      with:
+        luaVersion: 5.4
+  
+    - name: Install LuaRocks
+      uses: leafo/gh-actions-luarocks@v4.3.0
+      with:
+        luaRocksVersion: 3.9
+       
     - name: Install dependencies
       shell: bash
       run: |
-        sudo apt update
-        sudo apt install luarocks -yq
         sudo luarocks install fennel
         fennel --version
       
