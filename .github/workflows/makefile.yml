@@ -21,7 +21,7 @@ jobs:
       shell: bash
       run: |
         sudo apt update
-        sudo apt instal luarocks -yq
+        sudo apt install luarocks -yq
         luarocks install fennel
         fennel --version
       
