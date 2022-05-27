@@ -30,7 +30,7 @@ jobs:
     - name: Install dependencies
       shell: bash
       run: |
-        sudo luarocks install fennel
+        sudo ./luarocks install fennel
         fennel --version
       
     - name: Run build
