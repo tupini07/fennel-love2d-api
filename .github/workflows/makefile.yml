@@ -22,7 +22,7 @@ jobs:
       run: |
         sudo apt update
         sudo apt install luarocks -yq
-        luarocks install fennel
+        sudo luarocks install fennel
         fennel --version
       
     - name: Run build
