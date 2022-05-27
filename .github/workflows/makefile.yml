@@ -32,6 +32,7 @@ jobs:
       run: |
         sudo ./.luarocks/bin/luarocks install fennel
         fennel --version
+        ls -la
       
     - name: Run build
       run: make
