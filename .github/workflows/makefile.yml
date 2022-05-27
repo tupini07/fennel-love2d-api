@@ -1,0 +1,34 @@
+name: Build
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Checkout submodules
+      uses: textbook/git-checkout-submodule-action@2.1.1
+      
+    - name: Install dependencies
+      shell: bash
+      run: |
+        apt update
+        apt instal luarocks -yq
+        luarocks install fennel
+        fennel --version
+      
+    - name: Run build
+      run: make
+      
+    - name: Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: love-api.fnl
