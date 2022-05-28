@@ -4,9 +4,10 @@ Fennel is a great language, and (in my opinion) more ergonomic than Lua. Among o
 
 This repo provides a file that contains a set of _mocks_ functions provided by Love2d. These mock functions don't really do anything but they do use the same names and documentation as the original Love2d ones. This allows you to import the api file and have all the nice REPL features except for interactive execution.
 
-Example:
 
-TODO add Gif
+## Demo
+
+![love-api demo](https://user-images.githubusercontent.com/3422347/170836937-d9e99318-2e20-48ae-b231-6951028cf0ec.gif)
 
 
 ## How it works
