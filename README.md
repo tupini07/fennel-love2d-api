@@ -20,5 +20,5 @@ When you require this file, it will first check if the file is being executed in
 
 Just grab the latest release from [Releases](https://github.com/tupini07/fennel-love2d-api/releases) and put it somewhere in your project. 
 
-Once that's done just _require_ it where you need the Love2d api and that's it! See a very minimal example [here](example.fnl)
+Once that's done just _require_ it where you need the Love2d api and that's it! See a very minimal example [here](example).
 
